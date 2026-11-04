@@ -1,10 +1,10 @@
 # CraftRoster — guild downloads
 
-**Status: release mirror being prepared.** No ZIP is published in this repository yet. Do not treat this page as a completed installation source until a GitHub Release with a verified `CraftRoster.zip` is visible.
+**Public mirror currently offers beta.97.** [Download CraftRoster.zip for beta.97](https://github.com/hurlburtc-png/CraftRoster-Releases/releases/download/v0.8.0-beta.97/CraftRoster.zip). The development repository has newer builds; the public mirror is not yet synchronized.
 
 ## Installing
 
-1. Open this repository's **Releases** page and download the latest verified `CraftRoster.zip` asset (once available).
+1. Open this repository's **Releases** page and download the latest verified `CraftRoster.zip` asset. Do not use GitHub's automatically generated source ZIP.
 2. Extract into the WoW Forever game's `Interface/AddOns` directory.
 3. Confirm the layout is `Interface/AddOns/CraftRoster/CraftRoster.toc` (no extra nested CraftRoster directory).
 4. Restart or reload the game and enable CraftRoster in the addon list.
