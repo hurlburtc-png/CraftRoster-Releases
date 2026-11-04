@@ -18,7 +18,7 @@ A **separate Windows utility** is under development to find your WoW Forever fol
 
 ## Release freshness
 
-The most recently verified public addon mirror is **v0.8.0-beta.97**. The private development repository has newer builds; this public mirror may lag. Check the Releases page for what is **actually published**; older release assets are not silently overwritten.
+The latest verified public addon release is **v0.8.0-beta.100**, published November 4, 2026. Check the Releases page for what is **actually published**; older release assets are not silently overwritten.
 
 ## About CraftRoster
 
