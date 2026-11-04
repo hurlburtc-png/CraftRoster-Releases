@@ -28,4 +28,4 @@ A source release created by GitHub Actions using `GITHUB_TOKEN` may not trigger 
 
 ## Current status
 
-The last verified public addon release is **v0.8.0-beta.97**; source development has newer builds. **No Windows updater is verified as published**. Documentation does not constitute a release.
+The latest verified public addon release is **v0.8.0-beta.100**, published November 4, 2026. **No Windows updater is verified as published**. Documentation does not constitute a release.
