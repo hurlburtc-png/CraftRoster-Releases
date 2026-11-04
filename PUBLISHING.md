@@ -1,28 +1,31 @@
 # Publishing CraftRoster releases
 
-This repository is the public distribution channel. The source repository is `hurlburtc-png/CraftRoster`, which may become private after the release mirror is tested.
+This repository is the public distribution channel. Source development occurs separately in `hurlburtc-png/CraftRoster`.
 
-## Publishing requirements
+## Two distinct deliverables
 
-- Publish only a tagged, CI-tested version from the source repository.
-- Mirror the **exact** tested `CraftRoster.zip` asset (do not rebuild it from a different commit).
-- Publish SHA-256 checksum and a matching source archive for the same tag.
-- Include the MIT license and preserve third-party notices.
-- Verify `CraftRoster/CraftRoster.toc` is the only addon root inside the install ZIP.
-- Confirm the published version and checksum match the source release.
-- Never overwrite an existing release tag or silently replace a ZIP.
-- Do not expose GitHub tokens, saved variables, local player data or private issues.
+**Game addon:** publish the exact CI-tested **`CraftRoster.zip`** from a tagged source release. It must contain only one addon root, `CraftRoster/`, with `CraftRoster.toc` directly inside. Include SHA-256 checksum, release notes, source archive and license notices.
 
-## Automation credentials
+**Optional Windows updater:** publish separately as **`CraftRoster-Windows-Updater.zip`** or a clearly named signed installer, **never inside `CraftRoster.zip`**. It requires independent Windows testing, security review, provenance/checksum, instructions and version number. An addon release must not imply that an updater has been tested or released.
 
-A source-repository GitHub Actions workflow needs an explicitly scoped credential with **Contents: Read and write** on this release repository. The source repository's default `GITHUB_TOKEN` does not automatically gain write access to a different repository. Use a fine-grained token or GitHub App installation credential stored as an Actions secret in the source repository, and grant only this release repository access. Never put a token in committed files.
+Do not reuse a release asset name ambiguously. Clearly distinguish addon ZIP, updater ZIP/installer and GitHub's auto-generated source archives on the release page.
 
-## Transition
+## Publishing rules
 
-1. Verify mirror publishing with a test or tagged beta release.
-2. Verify anonymous download, source archive and checksum.
-3. Change the source repository to private.
-4. Verify the development integration and hourly automation still work.
-5. Verify the next automated release can still publish to this public repository.
+- Mirror the **exact** tagged, CI-tested addon ZIP; never rebuild from another commit.
+- Check SHA-256, archive root, matching TOC version and source tag.
+- Publish immutable tags; never silently replace old assets.
+- Keep source archive and bundled third-party notices/licenses.
+- Never expose tokens, local SavedVariables or private issue contents.
+- Verify public anonymous downloads after publishing.
+- Keep release descriptions honest about native-client and native-Windows test status.
 
-**Current status:** Configuration documentation only; no release has been mirrored here yet.
+## Credentials and automation
+
+Publishing from the private source repository to this public mirror requires a narrowly scoped GitHub App credential or fine-grained token with Contents write access to **this release repository**. The default source `GITHUB_TOKEN` cannot write to another repository. Never commit credentials.
+
+A source release created by GitHub Actions using `GITHUB_TOKEN` may not trigger a separate `release: published` workflow. Verify the workflow trigger and resulting mirror run; do not assume a published source release reached the public mirror.
+
+## Current status
+
+The last verified public addon release is **v0.8.0-beta.97**; source development has newer builds. **No Windows updater is verified as published**. Documentation does not constitute a release.
