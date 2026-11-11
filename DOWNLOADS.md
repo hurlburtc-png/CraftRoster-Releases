@@ -21,7 +21,7 @@ Do not run an unknown executable or PowerShell script claiming to be CraftRoster
 
 ## Version and integrity
 
-The latest verified public addon release is **v0.8.0-beta.100**, published November 4, 2026. Verify the version and `SHA256SUMS.txt` on each published release. Do not assume a release exists merely because the README mentions a future version.
+Check the tag and asset list on the public releases page for the current addon build. Verify the version and `SHA256SUMS.txt` on each published release. Do not assume a release exists merely because the README mentions a future version.
 
 The game addon and Windows utility must each have their **own named asset, version, checksum, release notes and testing status**. Do not bundle the updater into the addon ZIP or the addon into the updater installer.
 

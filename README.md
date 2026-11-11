@@ -18,13 +18,13 @@ A **separate Windows utility** is under development to find your WoW Forever fol
 
 ## Release freshness
 
-The latest verified public addon release is **v0.8.0-beta.100**, published November 4, 2026. Check the Releases page for what is **actually published**; older release assets are not silently overwritten.
+Check the release tag and asset list for the current public addon build. Check the Releases page for what is **actually published**; older release assets are not silently overwritten.
 
 ## About CraftRoster
 
-- Guild profession and recipe search, crafter directory and sources.
+- Search recipes, materials, and sources. In beta.114, **Ask Guild** finds crafters through regular chat and saves responders for later. Auto-replies default to on, and `/craskguild` toggles them.
 - Materials, estimated crafting costs, shopping lists and work orders.
-- Crafting requests and coordination with guildmates and external crafters.
+- Review craft requests before sending. In beta.114, **Cancel request** whispers “Request cancelled.” to the crafter.
 - Trade and mail preparation; **the player must manually accept the final trade**.
 
 Target: **WoW Forever 1.60.1 · Interface 16001**. Automated tests use simulated client APIs and do not replace live in-game testing.
